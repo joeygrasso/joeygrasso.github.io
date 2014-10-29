@@ -1,6 +1,28 @@
-Weeeooo Weeeoooo Weeeee
-
-<audio autoplay loop>
-  <source src="clip.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio> 
+<html>
+  <head></head>
+  <body onload="changecolors()">
+	<audio autoplay loop>
+	 <source src="clip.mp3" type="audio/mpeg">
+	  Your browser does not support the audio element.
+	</audio> 
+	<script>
+	  var x;
+	
+	  function changecolors() {
+	    x = 1;
+	    setInterval(change, 1000);
+	  }
+	
+	  function change() {
+	    if (x === 1) {
+	        color = "red";
+	        x = 2;
+	    } else {
+	        color = "blue";
+	        x = 1;
+	    }
+	    document.body.style.background = color;
+	  }
+	</script>
+  </body>
+</html>
