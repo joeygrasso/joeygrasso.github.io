@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head></head>
   <body bgcolor="red" onload="changecolors()">
 	<audio autoplay loop>
@@ -6,22 +7,18 @@
 	  Your browser does not support the audio element.
 	</audio> 
 	<script>
-	  var x;
-	
 	  function changecolors() {
-	    x = 1;
-	    setInterval(change, 500);
-	  }
-	
-	  function change() {
-	    if (x === 1) {
-	        color = "red";
-	        x = 2;
-	    } else {
-	        color = "blue";
-	        x = 1;
-	    }
-	    document.body.style.background = color;
+	   var x = 1;
+	    setInterval(function() {
+  	      if (x === 1) {
+                color = "red";
+                x = 2;
+              } else {
+                color = "blue";
+                x = 1;
+              }
+              document.body.style.background = color;
+            }, 500);
 	  }
 	</script>
   </body>
